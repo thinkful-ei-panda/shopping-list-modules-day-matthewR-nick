@@ -15,7 +15,9 @@ function create(name){
     name: name,
     checked: false
   }
-}
+};
+
+
 
 export default {
   validateName, create
