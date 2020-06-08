@@ -6,7 +6,7 @@ function findById (id){
   console.log(`find by id is running`)
   // console.log(items)
   const FOUND_ITEM = items.find((item => item.id === id));
-  console.log(FOUND_ITEM)
+  // console.log(FOUND_ITEM)
   return FOUND_ITEM;
 }
 
@@ -44,6 +44,12 @@ function findAndUpdateName(id, newName){
   }
 }
 
+function toggleCheckedFilter(){
+  this.hideCheckedItems = !this.hideCheckedItems;
+}
+
+
+
 
 
 export default {
@@ -53,7 +59,8 @@ export default {
   addItem,
   findAndToggleChecked,
   findAndUpdateName,
-  findAndDelete
+  findAndDelete,
+  toggleCheckedFilter
 };
 
 
