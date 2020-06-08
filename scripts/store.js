@@ -4,8 +4,9 @@ let items= [];
 
 function findById (id){
   console.log(`find by id is running`)
-  console.log(items)
-  const FOUND_ITEM = this.items.find((item => item.id === id));
+  // console.log(items)
+  const FOUND_ITEM = items.find((item => item.id === id));
+  console.log(FOUND_ITEM)
   return FOUND_ITEM;
 }
 
@@ -20,10 +21,13 @@ function addItem(name) {
 }
 
 function findAndToggleChecked(id){
+  console.log(findById(id) + "true section");
   if(findById(id).checked === true){
     findById(id).checked = false;
+    console.log(findById(id).checked + "true section");
   } else if(findById(id).checked === false){
     findById(id).checked = true;
+    console.log(findById(id).checked + "false section");
   }
 }
 
